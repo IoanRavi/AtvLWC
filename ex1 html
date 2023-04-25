@@ -1,0 +1,57 @@
+<!-- 1 - Crie um componente LWC que Renderize as seguintes propriedades vindas do JS:
+
+div1
+Empresa: X
+CNPJ: X
+Endereço: X
+
+div2
+Produto: X
+Descrição: X
+Preço: R$ X
+
+div3
+Promoção
+oferta1: X
+oferta2: X
+
+Botão.
+O botão deve ser usado para ocultar a div2 e div3 -->
+
+<template>
+	<lightning-card>
+
+		<h1></h1>
+
+		<div class="div1">
+
+			<p>Empresa: {Empresa}</p>
+			<p>CNPJ: {CNPJ}</p>
+			<p>Endereço: {Endereço}</p>
+
+		</div>
+		<br/>
+		<div class="div2" if:true={visible}>
+
+			<p>Produto: {Produto}</p>
+			<p>Descrição: {Descrição}</p>
+			<p>Preço: {Preço}</p>
+
+		</div>
+		<br/>
+		<div class="div3" if:true={visible}>
+
+			<p>Promoção</p>
+			<p>oferta1: {oferta1}</p>
+			<p>oferta2: {oferta2}</p>
+
+		</div>
+		<br/>
+
+
+		<lightning-button variant="brand" label="Ocultar info" title="ocultar produto e promoção" onclick={OcultaDiv}
+			class="slds-m-left_x-small"></lightning-button>
+
+
+	</lightning-card>
+</template>
