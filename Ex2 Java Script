@@ -1,0 +1,12 @@
+import { LightningElement } from "lwc";
+
+export default class App extends LightningElement {
+ 
+
+visible= true;
+
+OcultaDiv(){
+  this.visible=!this.visible;
+  }
+
+}
