@@ -1,0 +1,26 @@
+import { LightningElement } from "lwc";
+
+export default class App extends LightningElement {
+ 
+
+
+Empresa = "Revistalandia";
+CNPJ = "22.332.0001/00";
+Endereço = "Rua espirito santo, nº 547";
+
+
+Produto = "Mangá";
+Descrição = "Historia em quadrinhos estilo japones";
+Preço = "R$ 37,80";
+
+
+oferta1 = "Desconto de 10% caso compre de 2 a 5 unidades"
+oferta2 = "Desconto de 15% caso compre mais de 5 unidades"
+
+visible= true;
+
+OcultaDiv(){
+  this.visible=!this.visible;
+  }
+
+}
